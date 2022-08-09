@@ -1,10 +1,10 @@
 import propTypes from 'prop-types';
 export default function Stat({ label, percentage }) {
   return (
-    <div>
-      <span class="label">{label}</span>
-      <span class="percentage">{percentage}%</span>
-    </div>
+    <>
+      <span className="label">{label}</span>
+      <span className="percentage">{percentage}%</span>
+    </>
   );
 }
 Stat.propTypes = {
