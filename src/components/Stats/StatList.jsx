@@ -1,13 +1,14 @@
 import propTypes from 'prop-types';
 import Stat from './Stat';
+import s from './StatList.module.css';
 export default function StatList({ title = 'Заголовок секції', stats }) {
   return (
-    <section className="statistics">
-      <h2 className="title">{title}</h2>
+    <section className={s.statistics}>
+      <h2 className={s.title}>{title}</h2>
 
-      <ul className="stat-list">
+      <ul className={s.statList}>
         {stats.map(stat => (
-          <li className="item" key={stat.id}>
+          <li className={s.item} key={stat.id}>
             <Stat label={stat.label} percentage={stat.percentage} />
           </li>
         ))}

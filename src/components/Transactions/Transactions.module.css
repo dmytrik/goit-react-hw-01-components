@@ -1,0 +1,26 @@
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.transactionHistory {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 550px;
+  margin: 0 auto;
+}
+tr:nth-child(2n) {
+  background-color: silver;
+}
+thead {
+  background-color: aqua;
+}
+th {
+  margin: 0;
+}
+td {
+  padding: 10px;
+  text-align: center;
+}
