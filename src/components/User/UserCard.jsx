@@ -1,32 +1,42 @@
 import propTypes from 'prop-types';
-import s from './UserCard.module.css';
+import {
+  UserContainer,
+  UserAvatar,
+  UserName,
+  UserInfo,
+  UserDescription,
+  UserStatsBox,
+  UserStatsItem,
+  UserStat,
+  UserStatValue,
+} from './UserCard.styled';
 
 const UserCard = ({ name, tag, location, url, stats }) => {
   const { followers, views, likes } = stats;
   return (
-    <div className={s.profile}>
-      <div className={s.description}>
-        <img src={url} alt={name} className={s.avatar} />
-        <p className={s.name}>{name}</p>
-        <p className={s.tag}>@{tag}</p>
-        <p className={s.location}>{location}</p>
-      </div>
+    <UserContainer>
+      <UserDescription>
+        <UserAvatar src={url} alt={name} />
+        <UserName>{name}</UserName>
+        <UserInfo>@{tag}</UserInfo>
+        <UserInfo>{location}</UserInfo>
+      </UserDescription>
 
-      <ul className={s.stats}>
-        <li>
-          <span className={s.label}>Followers</span>
-          <span className={s.quantity}>{followers}</span>
-        </li>
-        <li>
-          <span className={s.label}>Views</span>
-          <span className={s.quantity}>{views}</span>
-        </li>
-        <li>
-          <span className={s.label}>Likes</span>
-          <span className={s.quantity}>{likes}</span>
-        </li>
-      </ul>
-    </div>
+      <UserStatsBox>
+        <UserStatsItem>
+          <UserStat>Followers</UserStat>
+          <UserStatValue>{followers}</UserStatValue>
+        </UserStatsItem>
+        <UserStatsItem>
+          <UserStat>Views</UserStat>
+          <UserStatValue>{views}</UserStatValue>
+        </UserStatsItem>
+        <UserStatsItem>
+          <UserStat>Likes</UserStat>
+          <UserStatValue>{likes}</UserStatValue>
+        </UserStatsItem>
+      </UserStatsBox>
+    </UserContainer>
   );
 };
 

@@ -1,6 +1,7 @@
 import propTypes from 'prop-types';
 import Stat from './Stat';
 import s from './StatList.module.css';
+import { StatBox } from './StatList.styled';
 export default function StatList({ title = 'Заголовок секції', stats }) {
   return (
     <section className={s.statistics}>
@@ -8,9 +9,9 @@ export default function StatList({ title = 'Заголовок секції', st
 
       <ul className={s.statList}>
         {stats.map(stat => (
-          <li className={s.item} key={stat.id}>
+          <StatBox key={stat.id}>
             <Stat label={stat.label} percentage={stat.percentage} />
-          </li>
+          </StatBox>
         ))}
       </ul>
     </section>

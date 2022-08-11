@@ -1,11 +1,10 @@
 import propTypes from 'prop-types';
-import s from './FriendList.module.css';
+
+import { IconActive } from './Friend.styled';
 export default function Friend({ imageUrl, friendName, online }) {
   return (
     <>
-      <span
-        className={online ? `${s.status} ${s.online}` : `${s.status}`}
-      ></span>
+      <IconActive online={online}></IconActive>
       <img className="avatar" src={imageUrl} alt={friendName} width="48" />
       <p className="name">{friendName}</p>
     </>
