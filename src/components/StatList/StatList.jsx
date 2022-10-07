@@ -1,5 +1,5 @@
 import propTypes from 'prop-types';
-import Stat from './Stat';
+import Stat from '../Stat/Stat';
 import s from './StatList.module.css';
 import { StatBox } from './StatList.styled';
 export default function StatList({ title = 'Заголовок секції', stats }) {

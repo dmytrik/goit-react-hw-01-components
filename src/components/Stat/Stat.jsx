@@ -1,5 +1,5 @@
 import propTypes from 'prop-types';
-import s from './StatList.module.css';
+import s from './Stat.module.css';
 export default function Stat({ label, percentage }) {
   return (
     <>
